@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --dark-moss-green: #606c38;
+  --pakistan-green: #283618;
+  --cornsilk: #fafae0;
+  --earth-yellow: #dda15e;
+  --tigers-eye: #bc6c25;
+  
+  --background: var(--cornsilk);
+  --foreground: var(--pakistan-green);
+  --primary: var(--dark-moss-green);
+  --secondary: var(--earth-yellow);
+  --accent: var(--tigers-eye);
+}
+
+:root {
+  /* Define main color scheme variables */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  /* Text colors for different UI elements */
+  --color-text-primary: var(--pakistan-green);
+  --color-text-secondary: var(--dark-moss-green);
+  --color-text-accent: var(--tigers-eye);
+  
+  /* Border and card colors */
+  --color-border: var(--earth-yellow);
+  --color-card-bg: rgba(254, 250, 224, 0.8);
+  
+  /* Ensure contrast for interactive elements */
+  --color-link: var(--tigers-eye);
+  --color-link-hover: var(--dark-moss-green);
+  --color-button-text: var(--cornsilk);
+  
+  /* Font families */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--pakistan-green);
+    --foreground: var(--cornsilk);
+    --primary: var(--dark-moss-green);
+    --secondary: var(--earth-yellow);
+    --accent: var(--tigers-eye);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
