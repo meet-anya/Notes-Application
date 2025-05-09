@@ -137,9 +137,10 @@ export default function Notes() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-bold text-pakistan-green mb-2">
+                <h3 className="text-lg font-bold text-black mb-2">
                   {note.title}
-                </h3>                <div className="text-sm text-black mb-4">
+                </h3>                
+                <div className="text-sm text-black mb-4">
                   <p>Course: {note.courseCode}</p>
                   <p>Semester: {note.semester}</p>
                 </div>

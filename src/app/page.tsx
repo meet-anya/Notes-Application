@@ -48,7 +48,7 @@ export default function Home() {
               <div className="bg-dark-moss-green text-white p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <span className="font-bold text-xl">1</span>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-pakistan-green">Access Notes</h3>
+              <h3 className="text-xl font-bold mb-2 text-black">Access Notes</h3>
               <p className="text-black">Find comprehensive notes for all subjects, organized by department and course.</p>
             </div>
             
@@ -56,7 +56,7 @@ export default function Home() {
               <div className="bg-earth-yellow text-white p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <span className="font-bold text-xl">2</span>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-pakistan-green">Question Papers</h3>
+              <h3 className="text-xl font-bold mb-2 text-black">Question Papers</h3>
               <p className="text-black">Practice with previous years&apos; question papers to ace your exams.</p>
             </div>
             
@@ -64,7 +64,7 @@ export default function Home() {
               <div className="bg-tigers-eye text-white p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <span className="font-bold text-xl">3</span>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-pakistan-green">Share Resources</h3>
+              <h3 className="text-xl font-bold mb-2 text-black">Share Resources</h3>
               <p className="text-black">Contribute to the community by uploading your own notes and materials.</p>
             </div>
           </div>

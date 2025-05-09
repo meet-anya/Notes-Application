@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Navbar from "@/components/Navbar";
@@ -15,7 +15,14 @@ export default function Register() {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  const { register } = useAuth();
+  const { user, register } = useAuth();
+
+  // Redirect if user is already logged in
+  useEffect(() => {
+    if (user) {
+      router.push('/');
+    }
+  }, [user, router]);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -46,7 +53,7 @@ export default function Register() {
       <div className="container mx-auto py-12 px-4 flex-grow flex items-center justify-center">
         <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-2 text-pakistan-green">Create an Account</h2>
+            <h2 className="text-2xl font-bold mb-2 text-black">Create an Account</h2>
             <p className="text-black">Join Anya Notes to access and share study materials</p>
           </div>
           
@@ -82,7 +89,7 @@ export default function Register() {
             </div>
             
             <div className="mb-6">
-              <label htmlFor="password" className="block text-pakistan-green font-medium mb-2 text-black">Password</label>
+              <label htmlFor="password" className="block text-black font-medium mb-2">Password</label>
               <input
                 type="password"
                 id="password"
@@ -96,7 +103,7 @@ export default function Register() {
             </div>
             
             <div className="mb-6">
-              <label htmlFor="confirmPassword" className="block text-pakistan-green font-medium mb-2 text-black">Confirm Password</label>
+              <label htmlFor="confirmPassword" className="block text-black font-medium mb-2">Confirm Password</label>
               <input
                 type="password"
                 id="confirmPassword"
@@ -110,9 +117,8 @@ export default function Register() {
             </div>
             
             <button
-              
               type="submit"
-              className={`w-full bg-dark-moss-green text-white py-2 rounded-md font-medium ${
+              className={`w-full bg-dark-moss-green text-black py-2 rounded-md font-medium ${
                 isLoading ? 'opacity-70 cursor-not-allowed ' : 'hover:bg-opacity-90 '
               }`}
               disabled={isLoading}

@@ -89,21 +89,21 @@ export default function Navbar() {
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
                   <Link 
                     href="/profile" 
-                    className="block px-4 py-2 text-pakistan-green hover:bg-cornsilk" 
+                    className="block px-4 py-2 text-black hover:bg-cornsilk" 
                     onClick={() => setShowDropdown(false)}
                   >
                     Profile
                   </Link>
                   <Link 
                     href="/my-uploads" 
-                    className="block px-4 py-2 text-pakistan-green hover:bg-cornsilk"
+                    className="block px-4 py-2 text-black hover:bg-cornsilk"
                     onClick={() => setShowDropdown(false)}
                   >
                     My Uploads
                   </Link>
                   <button 
                     onClick={handleLogout}
-                    className="block w-full text-left px-4 py-2 text-pakistan-green hover:bg-cornsilk"
+                    className="block w-full text-left px-4 py-2 text-black hover:bg-cornsilk"
                   >
                     Log Out
                   </button>

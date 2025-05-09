@@ -98,7 +98,7 @@ export default function Papers() {
       <main className="flex-grow container mx-auto py-8 px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">          <div>
             <h1 className="text-3xl font-bold text-pakistan-green mb-2">Question Papers</h1>
-            <p className="text-black font-medium">Practice with previous exam papers shared by your college community</p>
+            <p className="text-cornsilk font-medium">Practice with previous exam papers shared by your college community</p>
           </div>
           
           <div className="mt-4 md:mt-0 flex flex-col sm:flex-row gap-3">
@@ -147,7 +147,7 @@ export default function Papers() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-bold text-pakistan-green mb-2">
+                <h3 className="text-lg font-bold text-black mb-2">
                   {paper.title}
                 </h3>
                 <div className="text-sm text-black mb-4">
@@ -163,7 +163,7 @@ export default function Papers() {
                     <span className="flex items-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 text-tigers-eye mr-1"
+                        className="h-4 w-4 text-black mr-1"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -186,7 +186,7 @@ export default function Papers() {
                     <span className="flex items-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 text-tigers-eye mr-1"
+                        className="h-4 w-4 text-black mr-1"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

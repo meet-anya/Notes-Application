@@ -95,7 +95,7 @@ export default function MyUploads() {
           </div>
         ) : uploads.length === 0 ? (
           <div className="bg-white p-8 rounded-lg shadow-md text-center">
-            <h2 className="text-xl font-bold text-pakistan-green mb-4">No Uploads Yet</h2>
+            <h2 className="text-xl font-bold text-black mb-4">No Uploads Yet</h2>
             <p className="text-black mb-6">You haven't uploaded any materials yet.</p>
             <Link href="/upload" className="bg-dark-moss-green hover:bg-opacity-90 text-white px-6 py-3 rounded-md inline-block">
               Upload Your First Document
@@ -116,7 +116,7 @@ export default function MyUploads() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-bold text-pakistan-green mb-2">{upload.title}</h3>
+                  <h3 className="text-lg font-bold text-black mb-2">{upload.title}</h3>
                   <div className="text-sm text-black mb-4">
                     <p>Subject: {upload.subject}</p>
                     {upload.courseCode && <p>Course: {upload.courseCode}</p>}

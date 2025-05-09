@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Navbar from "@/components/Navbar";
@@ -13,7 +13,14 @@ export default function Login() {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  const { login } = useAuth();
+  const { user, login } = useAuth();
+
+  // Redirect if user is already logged in
+  useEffect(() => {
+    if (user) {
+      router.push('/');
+    }
+  }, [user, router]);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -36,7 +43,8 @@ export default function Login() {
 
       <div className="container mx-auto py-12 px-4 flex-grow flex items-center justify-center">
         <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-          <div className="text-center mb-8">            <h2 className="text-2xl font-bold mb-2 text-pakistan-green">Log in to Anya Notes</h2>
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold mb-2 text-black">Log in to Anya Notes</h2>
             <p className="text-black">Access your study materials and contributions</p>
           </div>
           
@@ -79,8 +87,8 @@ export default function Login() {
             
             <button
               type="submit"
-              className={` text-black w-full bg-dark-moss-green text-white py-2 rounded-md font-medium ${
-                isLoading ? 'opacity-70 cursor-not-allowed ' : 'hover:bg-opacity-90 text-black'
+              className={`w-full bg-dark-moss-green text-black py-2 rounded-md font-medium ${
+                isLoading ? 'opacity-70 cursor-not-allowed ' : 'hover:bg-opacity-90'
               }`}
               disabled={isLoading}
             >
